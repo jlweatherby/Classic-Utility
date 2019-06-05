@@ -1,41 +1,96 @@
-/*
-=================================
-TYPOGRAPHY
-=================================
-*/
+/*=================================
+COLORS COMPONENT
+=================================*/
 html {
-	color: #01161e;
+	--color-blue: #5da9e9;
+	--color-blue-dark: #335d80;
+	--color-blue-light: #a6d0f3; 
+
+	--color-red: #db5461;
+	--color-red-dark: #782e35;
+	--color-red-light: #eba1a8;
+
+	--color-green: #6a9975;
+	--color-green-dark: #3a5440;
+	--color-green-light: #adc7b3;
+
+	--color-yellow: #f7dfb7;
+	--color-yellow-dark: #846c44;
+	--color-yellow-light: #f7dfb7;
+
+	--color-shade: #c3c8ca;
+	--color-shade-dark: #01161e; 
+	--color-shade-light: #f0f1f1;
+
+}
+
+/*=================================
+TYPOGRAPHY
+=================================*/
+
+
+/*font-family: 'Arvo', serif;
+font-family: 'Rubik', sans-serif;*/
+
+html {
+	color: var(--color-shade-dark);
+	--font-display: 'Arvo', "Times New Roman", serif;
+	--font-primary: 'Rubik', 'Arial', sans-serif;
+}
+
+main {
+	margin: .5rem;
+	max-width: 35rem;
+}
+
+h1, h2, h3, h4, h5, figure text {
+	font-family: var(--font-display);
+	line-height: 1.2; 
+}
+
+header ul, footer ul{
+	display: flex;
+	justify-content: flex-end;
+	list-style: none;
+	margin:2rem 1rem 0 1rem;
+
+}
+
+p, li {
+	font-family: var(--font-primary);
+	line-height: 1.4;
+}
+
+.display-font p{
+	font-family: var(--font-display);;
 }
 
 a {
-	color: #6a9975;
+	color: var(--color-green);
 }
 
-/*
-=================================
+
+/*=================================
 HEADER COMPONENT
-=================================
-*/
+=================================*/
 header {
-	background-color: #a6d0f3;
+	background-color: var(--color-blue-light);
+	border-radius: 5px;
 	padding: 1rem;
 }
-/*
-=================================
+/*=================================
 FOOTER COMPONENT
-=================================
-*/
+=================================*/
 footer {
-	background-color: #f7dfb7;
+	background-color: var(--color-yellow);
+	border-radius: 5px;
 	padding: 2rem;
 }
 
 
-/*
-=================================
+/*=================================
 COLOR CARD LISTING
-=================================
-*/
+=================================*/
 .color-palette {
 	display: grid;
 	grid-gap: 5px;
@@ -44,7 +99,6 @@ COLOR CARD LISTING
 
 @media(min-width: 1000px ) {
 	.color-palette {
-		display: grid;
 		grid-column-gap: 1rem;
 		grid-template-columns: 350px 350px;
 		margin: auto;
@@ -53,7 +107,6 @@ COLOR CARD LISTING
 }
 @media(min-width: 1425px ) {
 	.color-palette {
-		display: grid;
 		grid-column-gap: 1rem;
 		grid-template-columns: 350px 350px 350px;
 		margin: auto;
