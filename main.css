@@ -61,14 +61,38 @@ p, li {
 	line-height: 1.4;
 }
 
+nav li{
+	margin: .4rem;
+
+}
+
 .display-font p{
 	font-family: var(--font-display);;
 }
 
 a {
 	color: var(--color-green);
+	padding: .2rem;
+	text-decoration: none;
 }
 
+a:active {
+	background-color: var(--color-yellow);
+	border-radius: .2rem;
+	color: var(--color-red);
+}
+a:focus {
+	border: var(--color-red-dark);
+}	
+
+a:visited {
+	color: var(--color-red);
+}
+
+a:hover {
+	background-color: var(--color-yellow-light);
+	border-radius: .2rem;
+}
 
 /*=================================
 HEADER COMPONENT
@@ -85,6 +109,11 @@ footer {
 	background-color: var(--color-yellow);
 	border-radius: 5px;
 	padding: 2rem;
+}
+
+footer nav {
+	background-color: var(--color-blue-light);
+	border-radius: .2rem;
 }
 
 
