@@ -28,19 +28,25 @@ html {
 TYPOGRAPHY
 =================================*/
 
-
-/*font-family: 'Arvo', serif;
-font-family: 'Rubik', sans-serif;*/
-
 html {
+	background-color: var(--color-shade-dark);
 	color: var(--color-shade-dark);
 	--font-display: 'Arvo', "Times New Roman", serif;
 	--font-primary: 'Rubik', 'Arial', sans-serif;
 }
 
-main {
+body {
+	background-color: var(--color-shade);
+	border-radius: .5rem;
 	margin: .5rem;
+	padding-top: .5rem;
+}
+main {
+	background-color: var(--color-shade-light);
+	border-radius: .5rem;
+	margin: .5rem auto;
 	max-width: 35rem;
+	padding: 1rem;
 }
 
 h1, h2, h3, h4, h5, figure text {
@@ -71,7 +77,7 @@ nav li{
 }
 
 a {
-	color: var(--color-green);
+	color: var(--color-green-dark);
 	padding: .2rem;
 	text-decoration: none;
 }
@@ -81,6 +87,7 @@ a:active {
 	border-radius: .2rem;
 	color: var(--color-red);
 }
+
 a:focus {
 	border: var(--color-red-dark);
 }	
@@ -98,8 +105,9 @@ a:hover {
 HEADER COMPONENT
 =================================*/
 header {
-	background-color: var(--color-blue-light);
+	background-color: var(--color-blue);
 	border-radius: 5px;
+	margin: 1rem;
 	padding: 1rem;
 }
 /*=================================
@@ -111,8 +119,13 @@ footer {
 	padding: 2rem;
 }
 
+footer p, h2, h3, h4 {
+	margin: 0 auto .5rem;
+	max-width: 35rem;
+}
+
 footer nav {
-	background-color: var(--color-blue-light);
+	background-color: var(--color-blue);
 	border-radius: .2rem;
 }
 
@@ -124,6 +137,10 @@ COLOR CARD LISTING
 	display: grid;
 	grid-gap: 5px;
 
+}
+
+.color-swatch {
+	border-radius: .5rem;	
 }
 
 @media(min-width: 1000px ) {
@@ -143,6 +160,5 @@ COLOR CARD LISTING
 	}
 }
 
-.color-palette h3{
-	display: inline;
-}
+
+
