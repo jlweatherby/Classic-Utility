@@ -14,7 +14,7 @@ html {
 	--color-green-dark: #3a5440;
 	--color-green-light: #adc7b3;
 
-	--color-yellow: #f7dfb7;
+	--color-yellow: #f2c57c;
 	--color-yellow-dark: #846c44;
 	--color-yellow-light: #f7dfb7;
 
@@ -28,25 +28,46 @@ TYPOGRAPHY
 =================================*/
 
 html {
-	background-color: var(--color-shade-dark);
+	background-color: var(--color-yellow);
 	color: var(--color-shade-dark);
 	--font-display: 'Arvo', "Times New Roman", serif;
 	--font-primary: 'Rubik', 'Arial', sans-serif;
+
+/*type-scale*/
+	--ratio: 1.333;
+	--size-one: calc(1rem * var(--ratio)); 
+	--size-two: calc(var(--ratio) * var(--size-one));
+	--size-three: calc(var(--ratio) * var(--size-two));
+	--size-four: calc(var(--ratio) * var(--size-three));
 }
 
 h1, h2, h3, h4, h5, figure text {
+	color: var(--color-blue-dark);
 	font-family: var(--font-display);
-	line-height: 1.2; 
+	line-height: 1.1; 
+}
+
+h1 {
+	font-size: var(--size-four);
+}
+
+h2 {
+	font-size: var(--size-three);
+}
+
+h3 {
+	font-size: var(--size-two);
+}
+
+p, li {
+	font-family: var(--font-primary);
+	font-size: var(--size-one)
+	line-height: 1.4;
 }
 
 header ul, footer ul{
 	list-style: none;
 	margin: 1rem .5rem;
-}
-
-p, li {
-	font-family: var(--font-primary);
-	line-height: 1.4;
 }
 
 .display-font p{
@@ -70,7 +91,7 @@ a:focus {
 }	
 
 a:visited {
-	color: var(--color-red);
+	color: var(--color-red-dark);
 }
 
 a:hover {
@@ -82,33 +103,41 @@ a:hover {
 PAGE LAYOUT
 =================================*/
 body {
-	background-color: var(--color-shade);
+	background-color: var(--color-red-dark);
 	border-radius: .5rem;
 	margin: .5rem;
 	padding: .5rem .5rem;
 }
 
 main {
+	margin: .5rem;
+}
+
+main h2, main section {
 	background-color: var(--color-shade-light);
 	border-radius: .5rem;
 	margin: .5rem auto;
 	max-width: 35rem;
+}
+
+main section {
 	padding: 1rem;
 }
 
-nav li{
+nav li {
 	margin: .4rem;
 }
 /*=================================
 HEADER COMPONENT
 =================================*/
 header {
-	background-color: var(--color-blue);
+	background-color: var(--color-yellow-light);
 	border-radius: 5px;
 	margin: .5rem;
 	padding: 2rem;
 }
 
+/*
 @media (min-width: 361px) {
 	header {
 		align-items: baseline;
@@ -121,12 +150,12 @@ header {
 		display:flex;
 		justify-content: space-between;
 	}
-
+*/
 /*=================================
 FOOTER COMPONENT
 =================================*/
-footer {
-	background-color: var(--color-yellow);
+footer{
+	background-color: var(--color-yellow-light);
 	border-radius: 5px;
 	margin: .5rem;
 	padding: 2rem;
