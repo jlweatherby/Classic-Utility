@@ -44,21 +44,32 @@ html {
 h1, h2, h3, h4, h5, figure text {
 	color: var(--color-blue-dark);
 	font-family: var(--font-display);
-	line-height: 1.1; 
+	 
 }
 
 h1 {
 	font-size: var(--size-four);
+	letter-spacing: -.08em;
+	line-height: 1.1;
 }
 
 h2 {
 	font-size: var(--size-three);
+	letter-spacing: -.02em;
+	line-height: 1.2;
 }
 
 h3 {
 	font-size: var(--size-two);
+	letter-spacing: -.04em;
+	line-height: 1.3;
 }
 
+h4, h5 {
+	font-size: var(--size-one);
+	letter-spacing: -.04em;
+	line-height: 1.4;
+}
 p, li {
 	font-family: var(--font-primary);
 	font-size: var(--size-one)
@@ -70,10 +81,20 @@ header ul, footer ul{
 	margin: 1rem .5rem;
 }
 
-.display-font p{
-	font-family: var(--font-display);;
+.featured-text {
+	font-family: var(--font-primary);
+	font-size: var(--size-one);
+	font-weight: 700;
+	margin: .2rem .5rem;
 }
 
+.tertiary-text {
+	font-size: .7rem;
+	font-style: italic;
+	max-width: 24.5rem;
+}
+
+/*Link styles*/
 a {
 	color: var(--color-green-dark);
 	padding: .2rem;
@@ -179,7 +200,7 @@ footer nav {
 
 
 /*=================================
-COLOR CARD LISTING
+CARD LISTING and FIGURES
 =================================*/
 
 .color-swatch {
@@ -192,7 +213,25 @@ COLOR CARD LISTING
 }
 
 .swatch-group {
-	margin: 0;
+	border: .1rem solid var(--color-shade);
+	background-color: var(--color-shade-light);
+	border-radius: .5rem;
+	margin-bottom: 1rem;
+	padding-top: 1rem;
 	text-align: center;
 }
+
+.style-subsection{
+	border: .1rem solid var(--color-shade);
+	background-color: var(--color-shade-light);
+	border-radius: .5rem;
+	margin: 0 auto 1rem auto;
+	padding: .5rem;
+}
+
+.display-font p{
+	font-family: var(--font-display);
+}
+
+
 
