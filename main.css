@@ -30,8 +30,11 @@ TYPOGRAPHY
 html {
 	background-color: var(--color-yellow);
 	color: var(--color-shade-dark);
+
 	--font-display: 'Arvo', "Times New Roman", serif;
 	--font-primary: 'Rubik', 'Arial', sans-serif;
+
+	font-family: var(--font-primary);
 
 /*type-scale*/
 	--ratio: 1.333;
@@ -41,14 +44,25 @@ html {
 	--size-four: calc(var(--ratio) * var(--size-three));
 }
 
-h1, h2, h3, h4, h5, figure text {
+h1, h2, h3, h4, h5, h6, figure text {
 	color: var(--color-blue-dark);
 	font-family: var(--font-display);
 }
 
-h1 {
+.logo {
 	font-size: var(--size-four);
 	letter-spacing: -.08em;
+	line-height: 1.1;
+}
+
+.index-h2 {
+	padding: 0;
+	margin: 0;
+}
+
+h1 {
+	font-size:var(--size-four);
+	letter-spacing: -.04em;
 	line-height: 1.1;
 }
 
@@ -64,7 +78,7 @@ h3 {
 	line-height: 1.3;
 }
 
-h4, h5 {
+h4, h5, h6 {
 	font-size: var(--size-one);
 	letter-spacing: -.04em;
 	line-height: 1.4;
@@ -74,16 +88,13 @@ p, li {
 	line-height: 1.4;
 }
 
-header ul, footer ul{
-	list-style: none;
-	margin: 1rem .5rem;
-}
-
 .featured-text {
+	color: var(--color-green-dark);
 	font-family: var(--font-primary);
 	font-size: var(--size-one);
 	font-weight: 700;
 	margin: .2rem .5rem;
+	padding-bottom: 1rem;
 }
 
 .tertiary-text {
@@ -94,9 +105,18 @@ header ul, footer ul{
 
 /*Link styles*/
 a {
-	color: var(--color-green-dark);
+	color: var(--color-green);
 	padding: .2rem;
 	text-decoration: none;
+}
+
+a:visited {
+	color: var(--color-blue);
+}
+
+a:hover {
+	background-color: var(--color-yellow-light);
+	border-radius: .2rem;
 }
 
 a:active {
@@ -110,15 +130,6 @@ a:focus {
 	background-color: var(--color-red-light);
 	color: var(--color-green-dark);
 }	
-
-a:visited {
-	color: var(--color-green-dark);
-}
-
-a:hover {
-	background-color: var(--color-yellow-light);
-	border-radius: .2rem;
-}
 
 a h1, a h2, a h3, a h4, a h5 {
 	color: var(--color-blue-dark);
@@ -144,7 +155,7 @@ main h2, main section {
 	margin: .5rem auto;
 }
 
-main section {
+main section{
 	padding: 1rem;
 }
 
@@ -209,12 +220,39 @@ footer nav {
 		display:flex;
 		justify-content: flex-end;
 	}
-
 }
-/*=================================
-LISTS- ORDERED and UNORDERED
-=================================*/
 
+header ul, footer ul{
+	list-style: none;
+	margin: 1rem .5rem;
+}
+
+footer a {
+	color: var(--color-green);
+	padding: .2rem;
+	text-decoration: none;
+}
+
+footer a:visited {
+	color: var(--color-green-dark);
+}
+
+footer a:hover {
+	background-color: var(--color-yellow-light);
+	border-radius: .2rem;
+}
+
+footer a:active {
+	background-color: var(--color-yellow);
+	border-radius: .2rem;
+	color: var(--color-red);
+}
+
+footer a:focus {
+	border: var(--color-red-dark);
+	background-color: var(--color-red-light);
+	color: var(--color-green-dark);
+}	
 
 /*=================================
 BLOCKQUOTES and CITES
@@ -226,7 +264,7 @@ blockquote {
 	border-radius: .5rem;
 	margin: .5rem .2rem;
 	padding: 1rem .5rem;
-	quotes: "\201C""\201D""\2018""\2019";
+	quotes: "\201D""\2018""\2019";
 }
 
 blockquote:before {
@@ -253,9 +291,96 @@ cite {
 	font-style: italic;
 	text-align: right;
 }
+/*=================================
+BUTTON LINKS
+=================================*/
+
+.link-button {
+	background-color: var(--color-yellow);
+	border-radius: .5rem;
+	box-shadow: .2rem .2rem .2rem .2rem var(--color-shade);
+	color: var(--color-blue-dark);
+	display: inline-block;
+	margin: 1rem;
+	padding: 1rem;
+	transition: all .5s;
+}
+
+.link-button-hero {
+	font-size: 1.2rem;
+	padding: 1.7rem;
+}
+
+.link-button-normal {
+	background-color: transparent;
+	border: 3px solid;
+	color: purple;
+}
+
+.link-button-tertiary {
+	background-color: transparent;
+	border: 1px solid;
+	color: var(--color-blue-dark);
+}
+
+.link-button:hover, .link-button:focus {
+	background-color: var(--color-blue-dark);
+	border-radius: 0;
+	color: var(--color-yellow-light);
+	outline: none;
+	transform: scale(1.2);
+	transition: all .5s;
+}
+
+.link-button:active {
+	box-shadow: 4px 4px rgba(0,0,0,.3) inset;
+	transform: scale(.9);
+}
+/*=================================
+ACCORDIONS
+=================================*/
+details {
+	border: 1px solid purple;
+	margin: 1rem 0;
+}
+
+summary {
+	box-shadow:  -.2rem -.2rem .2rem var(--color-shade) inset;
+	border-radius: .5rem;
+	font-size: 1.2rem;
+	margin: .5rem 0;
+	padding: .5rem;
+}
+
+summary:focus {
+	outline: none;
+}
+
+details div {
+	background-color: var(--color-yellow-light);
+	border-radius: .5rem;
+	box-shadow:  .2rem .2rem .2rem var(--color-yellow) inset;
+	padding: 1rem;
+}
+
+summary::-webkit-details-marker {
+	color: transparent;
+}
+
+summary:before {
+	content: '✚';
+	color: var(--color-red-dark);
+	display: inline-block;
+	transition: all .5s;
+}
+
+details[open] summary:before{
+	transform: rotate(360deg);
+	transition: all 1s;
+}
 
 /*=================================
-CARD LISTING and FIGURES
+EXAMPLES
 =================================*/
 
 .color-swatch {
@@ -267,21 +392,11 @@ CARD LISTING and FIGURES
 	font-size: .5rem;
 }
 
-/*
-.swatch-group {
-	border: .1rem solid var(--color-shade);
+.block{
 	background-color: var(--color-shade-light);
-	border-radius: .5rem;
-	margin-bottom: 1rem;
-	padding-top: 1rem;
-	text-align: center;
-}
-*/
-
-.style-subsection{
 	border: .1rem solid var(--color-shade);
-	background-color: var(--color-shade-light);
 	border-radius: .5rem;
+	box-shadow: -.2rem -.2rem .2rem var(--color-shade) inset;
 	margin: 0 1rem 1rem 1rem;
 	padding: .5rem;
 }
@@ -290,7 +405,7 @@ CARD LISTING and FIGURES
 	text-align: center;
 }
 
-.style-subsection h1, .style-subsection h2, .style-subsection h3, .style-subsection h4, .style-subsection h5, .style-subsection p, {
+.block h1, .block h2, .block h3, .block h4, .block h5, .block p, {
 	text-align: left;
 }
 
