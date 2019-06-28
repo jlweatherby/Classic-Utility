@@ -168,6 +168,7 @@ HEADER COMPONENT
 header {
 	background-color: var(--color-yellow-light);
 	border-radius: 5px;
+	box-shadow: 0 2px 15px var(--color-yellow-dark) inset;
 	margin: .5rem;
 	padding: 2rem;
 }
@@ -183,7 +184,6 @@ header ul {
 		display: flex;
 		justify-content: space-between;
 	}
-
 }
 @media (min-width: 619px) {
 
@@ -191,7 +191,36 @@ header ul {
 		display:flex;
 		justify-content: space-between;
 	}
+}
 
+.logo {
+	background: var(--color-red-light);
+	border-radius: .5rem;
+	box-shadow: 0 2px 15px var(--color-red-dark);
+	font-size: 2.3rem;
+	letter-spacing: -.08rem;
+	font-weight: 400;
+	margin: 0;
+	padding: 20px;
+	position: relative;
+}
+
+.logo a{
+	border-radius: .5rem;
+	color: var(--color-blue-dark);
+	display: inline-block;
+	font-family: var(--font-display);
+	text-shadow: 2px 2px 0 var(--color-red-light), 4px 4px 0 var(--color-yellow-dark);
+}
+
+.logo a:hover {
+	background: var(--color-yellow);
+	box-shadow: 0 2px 15px var(--color-red-dark);
+	display: inline-block;
+	padding: .5rem;
+	text-shadow: -2px 2px 0 var(--color-yellow), -4px 4px 0 var(--color-yellow-dark);
+	transform: scale(1.2);
+	transition: all .5s ease;
 }
 /*=================================
 FOOTER COMPONENT
@@ -199,6 +228,7 @@ FOOTER COMPONENT
 footer{
 	background-color: var(--color-yellow-light);
 	border-radius: 5px;
+	box-shadow: 0 2px 15px var(--color-yellow-dark) inset;
 	margin: .5rem;
 	padding: 2rem;
 }
@@ -210,7 +240,8 @@ footer p, footer h2, footer h3, footer h4{
 
 footer nav {
 	background-color: var(--color-blue);
-	border-radius: .2rem;
+	border-radius: .5rem;
+	box-shadow: 0 2px 15px var(--color-blue-dark);
 	padding: .3rem 0;
 }
 
@@ -262,7 +293,9 @@ blockquote {
 	border-left: .5rem solid var(--color-red);
 	border-right: .5rem solid var(--color-red);
 	border-radius: .5rem;
-	margin: .5rem .2rem;
+	box-shadow: 0 2px 15px var(--color-blue-dark);
+	margin: .5rem auto;
+	max-width: 30rem;
 	padding: 1rem .5rem;
 	quotes: "\201D""\2018""\2019";
 }
@@ -298,7 +331,7 @@ BUTTON LINKS
 .link-button {
 	background-color: var(--color-yellow);
 	border-radius: .5rem;
-	box-shadow: .2rem .2rem .2rem .2rem var(--color-shade);
+	box-shadow: 0 2px 15px var(--color-red-dark);
 	color: var(--color-blue-dark);
 	display: inline-block;
 	margin: 1rem;
@@ -325,7 +358,7 @@ BUTTON LINKS
 
 .link-button:hover, .link-button:focus {
 	background-color: var(--color-blue-dark);
-	border-radius: 0;
+	border-radius: .5rem;
 	color: var(--color-yellow-light);
 	outline: none;
 	transform: scale(1.2);
@@ -345,7 +378,7 @@ details {
 }
 
 summary {
-	box-shadow:  -.2rem -.2rem .2rem var(--color-shade) inset;
+	box-shadow: 0 2px 15px var(--color-red-dark);
 	border-radius: .5rem;
 	font-size: 1.2rem;
 	margin: .5rem 0;
@@ -359,7 +392,7 @@ summary:focus {
 details div {
 	background-color: var(--color-yellow-light);
 	border-radius: .5rem;
-	box-shadow:  .2rem .2rem .2rem var(--color-yellow) inset;
+	box-shadow: 0 2px 15px var(--color-red-dark) inset;
 	padding: 1rem;
 }
 
@@ -396,7 +429,7 @@ EXAMPLES
 	background-color: var(--color-shade-light);
 	border: .1rem solid var(--color-shade);
 	border-radius: .5rem;
-	box-shadow: -.2rem -.2rem .2rem var(--color-shade) inset;
+	box-shadow: 0 2px 15px var(--color-red-dark) inset;
 	margin: 0 1rem 1rem 1rem;
 	padding: .5rem;
 }
