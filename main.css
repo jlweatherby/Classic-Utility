@@ -340,19 +340,25 @@ BUTTON LINKS
 }
 
 .link-button-hero {
+	border: 6px solid;
 	font-size: 1.2rem;
 	padding: 1.7rem;
 }
 
 .link-button-normal {
 	background-color: transparent;
-	border: 3px solid;
-	color: purple;
+	border: 4px solid;
+	color: var(--color-blue-dark);
 }
 
 .link-button-tertiary {
 	background-color: transparent;
 	border: 1px solid;
+	color: var(--color-blue-dark);
+	padding: .2rem;
+}
+
+.link-button:visited {
 	color: var(--color-blue-dark);
 }
 
@@ -410,6 +416,54 @@ summary:before {
 details[open] summary:before{
 	transform: rotate(360deg);
 	transition: all 1s;
+}
+
+/*=================================
+DIALOGS
+=================================*/
+dialog {
+	border: none;
+	border-radius: .5rem;
+	box-shadow: 0 2px 15px var(--color-red-dark);
+	max-width: 50%;
+	padding: 2rem;
+	transition: all .5s;
+}
+
+dialog{
+	margin: auto;
+}
+
+dialog::backdrop {
+	background: rgba(0,0,0,.5);
+}
+
+dialog[open] {
+    -webkit-animation: show .5s ease normal;
+}
+@keyframes show{
+    from {
+        transform: translateY(600px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+#modal-demo {
+	background-color: var(--color-shade);
+	height: 100%; 
+	left: 0;
+	overflow: auto; 
+	position: fixed;
+	top: 50%;
+	width: 100%;
+}
+
+#modal-demo div{
+	margin: auto;
+	max-width: 35rem;
+	z-index: 1;
 }
 
 /*=================================
