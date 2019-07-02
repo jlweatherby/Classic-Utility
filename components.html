@@ -27,6 +27,7 @@
 
 		<main>
 			<h1 class="block">Classic Utility Components</h1>
+
 			<section class="block">
 				<h2>Button Links</h2>
 				<figure>
@@ -39,8 +40,10 @@
 					<a href="#" class="link-button link-button-tertiary">Tertiary Button</a>
 				</figure>
 			</section>
+
 			<section class="block">
 				<h2>Accordions</h2>
+
 				<figure>
 					<details class="block">
 						<summary>Accordion</summary>
@@ -50,8 +53,28 @@
 							<p>This is some useful information</p>
 						</div>
 					</details>
+
+					<details class="block">
+						<summary>Accordion</summary>
+						<div>
+							<p>This is some useful information</p>
+							<p>This is some useful information</p>
+							<p>This is some useful information</p>
+						</div>
+					</details>
+					<details class="block">
+						<summary>Accordion</summary>
+						<div>
+							<p>This is some useful information</p>
+							<p>This is some useful information</p>
+							<p>This is some useful information</p>
+						</div>
+					</details>
 				</figure>
+
+
 			</section>
+
 			<section class="block">
 				<h2>Modal Dialog</h2>
 				<figure>
@@ -60,7 +83,7 @@
 						<div>
 							<h2>Dialog Heading</h2>
 							<p>Dialog Paragraph</p>
-							<a href="#" class="link-button link-button-tertiary">Tertiary Button</a>
+							<a href="#" class="link-button link-button-tertiary">Close</a>
 						</div>
 					</dialog> 
 				</figure>
@@ -70,6 +93,7 @@
 		<footer>
 			<h4>Classic Utility &copy2019 J L Weatherby</h4>
 			<p class="tertiary-text">JL Weatherby has a BA in Applied Linguistics. He taught literacy skills to children and English language skills to adults in English and Spanish in 2016. From 2016 to 2018 he served refugees and other displaced individuals with Refugee Services of Texas. He is now pursuing a UX Design Certificate from Austin Community College and is working at a PingPong club called Spin! in downtown Austin, TX</p>
+
 			<nav>
 				<ul>
 			        <li> <a href="http://pantscardco.000webhostapp.com/">pants card co.</a></li>   
@@ -86,14 +110,14 @@
 				const open = document.getElementById('open-modal');
 
 				open.addEventListener('click', () => {
-				modal.showModal();
+					modal.showModal();
 				});
 
-			modal.addEventListener('click', event => {
-				if (event.target === modal) {
-				modal.close('cancelled');
-				}
-			});
+				modal.addEventListener('click', event => {
+					if (event.target === modal) {
+						modal.close('cancelled');
+					}
+				});
 
 			});
 		</script>
