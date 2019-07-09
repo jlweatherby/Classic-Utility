@@ -172,6 +172,10 @@ nav li {
 	padding: .5rem;
 }
 
+html {
+	--block-shadow: 0 2px 15px var(--color-red-dark);
+}
+
 /*=================================
 HEADER COMPONENT
 =================================*/
@@ -206,7 +210,7 @@ header ul {
 .logo {
 	background: var(--color-red-light);
 	border-radius: .5rem;
-	box-shadow: 0 2px 15px var(--color-red-dark);
+	box-shadow: var(--block-shadow);
 	font-size: 2.3rem;
 	letter-spacing: -.08rem;
 	font-weight: 400;
@@ -225,7 +229,7 @@ header ul {
 
 .logo a:hover {
 	background: var(--color-yellow);
-	box-shadow: 0 2px 15px var(--color-red-dark);
+	box-shadow: var(--block-shadow);
 	display: inline-block;
 	padding: .5rem;
 	text-shadow: -2px 2px 0 var(--color-yellow), -4px 4px 0 var(--color-yellow-dark);
@@ -341,7 +345,7 @@ BUTTON LINKS
 .link-button {
 	background-color: var(--color-yellow);
 	border-radius: .5rem;
-	box-shadow: 0 2px 15px var(--color-red-dark);
+	box-shadow: var(--block-shadow);
 	color: var(--color-blue-dark);
 	display: inline-block;
 	margin: 1rem;
@@ -385,6 +389,7 @@ BUTTON LINKS
 	box-shadow: 4px 4px rgba(0,0,0,.3) inset;
 	transform: scale(.9);
 }
+
 /*=================================
 ACCORDIONS
 =================================*/
@@ -394,7 +399,7 @@ details {
 }
 
 summary {
-	box-shadow: 0 2px 15px var(--color-red-dark);
+	box-shadow: var(--block-shadow)
 	border-radius: .5rem;
 	font-size: 1.2rem;
 	margin: .5rem 0;
@@ -459,14 +464,10 @@ DIALOGS
 dialog {
 	border: none;
 	border-radius: .5rem;
-	box-shadow: 0 2px 15px var(--color-red-dark);
+	box-shadow: var(--block-shadow);
 	max-width: 50%;
 	padding: 2rem;
 	transition: all .5s;
-}
-
-dialog{
-	margin: auto;
 }
 
 dialog::backdrop {
@@ -477,6 +478,7 @@ dialog::backdrop {
 dialog[open] {
     -webkit-animation: show .5s ease normal;
 }
+
 @keyframes show{
     from {
         transform: translateY(600px);
