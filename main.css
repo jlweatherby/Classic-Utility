@@ -93,8 +93,8 @@ p, li{
 	font-family: var(--font-primary);
 	font-size: var(--size-one);
 	font-weight: 700;
-	margin: .2rem .5rem;
-	padding-bottom: 1rem;
+	margin: .2rem 0 1rem .5rem;
+
 }
 
 .tertiary-text {
@@ -399,7 +399,7 @@ details {
 }
 
 summary {
-	box-shadow: var(--block-shadow)
+	box-shadow: var(--block-shadow);
 	border-radius: .5rem;
 	font-size: 1.2rem;
 	margin: .5rem 0;
@@ -476,7 +476,7 @@ dialog::backdrop {
 }
 
 dialog[open] {
-    -webkit-animation: show .5s ease normal;
+	animation: show .5s ease normal;
 }
 
 @keyframes show{
@@ -502,7 +502,7 @@ dialog[open] {
 Forms
 =============================================*/
 
-form label, form input, form text, form textarea, select {
+label, input, text, textarea, select {
 	display: block;
 }
 
@@ -546,6 +546,10 @@ input:not([type=submit]), input:focus {
 
 input[error] {
 
+}
+
+#address, #select {
+	margin-bottom: 1rem;
 }
 
 input[type=submit], button {
@@ -620,7 +624,7 @@ EXAMPLES
 	text-align: center;
 }
 
-.block h1, .block h2, .block h3, .block h4, .block h5, .block p, {
+.block h1, .block h2, .block h3, .block h4, .block h5, .block p {
 	text-align: left;
 }
 
