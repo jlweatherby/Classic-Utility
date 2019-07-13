@@ -71,8 +71,6 @@
 						</div>
 					</details>
 				</figure>
-
-
 			</section>
 
 			<section class="block">
@@ -86,6 +84,52 @@
 							<a href="#" class="link-button link-button-tertiary">Close</a>
 						</div>
 					</dialog> 
+				</figure>
+			</section>
+
+			<section class="block">
+				<h2>Form Inputs</h2>
+				<figure>
+					<form>
+						<h3>Text Input</h3>
+						<div class="block">
+							<label for="text-input">Text Input</label>
+							<input type="text" id="first-name" name="text-input" required class="error" placeholder="Placeholder Text">
+							<p class="featured-text">*Required</p>
+						</div>
+
+						<h3>Text Area Input</h3>
+						<div class="block">
+							<label for="textarea">Text Area Input</label>
+							<p class="helper-text">Helper Text</p>
+							<input type="textarea" id="textarea" name="textarea" class="error" placeholder="Placeholder Text"></textarea>
+							<p class="error-text">Please fill in this form.</p>
+							<p class="featured-text">*Required</p>
+						</div>
+
+						<h3>Disabled Input</h3>
+						<div class="block">
+							<label for="disabled-input">Text Input (Disabled)</label>
+							<input type="text" id="address" name="disabled-input" disabled>
+						</div>
+
+						<h3>Select Input</h3>
+						<div class="block">
+							<label for="select">Select Input</label>
+							<select id="select" name="select">
+								<option disabled hidden selected>Please Select</option>
+								<option value="Alabama">Option 1</option>
+								<option value="Alaska">Option 2</option>
+								<option value="Arkansas">Option 3</option>
+								<option value="Arizona">Option 4</option>
+								<p class="featured-text">*Required</p>
+							</select>
+						</div>
+
+						<input type="submit">
+
+					</form>
+
 				</figure>
 			</section>
 		</main>

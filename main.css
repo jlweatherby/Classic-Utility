@@ -83,7 +83,7 @@ h4, h5, h6 {
 	letter-spacing: -.04em;
 	line-height: 1.4;
 }
-p, li {
+p, li{
 	font-family: var(--font-primary);
 	line-height: 1.4;
 }
@@ -497,6 +497,111 @@ dialog[open] {
 	max-width: 35rem;
 	z-index: 1;
 }
+
+/*============================================
+Forms
+=============================================*/
+
+form label, form input, form text, form textarea, select {
+	display: block;
+}
+
+input:not([type=submit]), form input, form text, form textarea, select {
+	border: .1rem solid var(--color-blue);
+	display: block;
+	margin: .5rem 0 0 .5rem;
+	padding: .5rem;
+}	
+
+form label {
+	font-size: var(--size-one);
+	letter-spacing: -.04em;
+	line-height: 1.4;	
+}
+
+form select {
+	-webkit-appearance:none;
+}
+
+input::placeholder {
+	font-size: .7rem;
+	font-style: italic;
+}
+
+form .block {
+	background-color: var(--color-blue-light);
+	max-width: 35rem;
+}
+
+.helper-text{
+	margin-left: .5rem;
+	font: normal .5rem var(--font-primary);
+}
+
+input:not([type=submit]), input:focus {
+	background-color: var(--color-yellow-light);
+	border-color: var(--color-green);
+	color: green;
+}
+
+input[error] {
+
+}
+
+input[type=submit], button {
+	background-color: var(--color-yellow);
+	border-radius: .5rem;
+	box-shadow: var(--block-shadow);
+	color: var(--color-blue-dark);
+	display: inline-block;
+	margin: 1rem;
+	padding: 1rem;
+	transition: all .5s;
+}
+
+input[type=submit]:active, button:active {
+	box-shadow: 4px 4px rgba(0,0,0,.3) inset;
+	transform: scale(.9);
+	transition: all .5s;
+}
+
+input[type=submit]:hover, input[type=submit]:focus, button:hover, button:focus {
+	background-color: var(--color-blue-dark);
+	border-radius: .5rem;
+	color: var(--color-yellow-light);
+	cursor: pointer;
+	outline: none;
+	transform: scale(1.2);
+	transition: all .5s;
+}
+
+
+
+
+input[disabled] {
+	background-color: var(--color-shade);
+	border-color: var(--color-red-dark);
+	cursor: not-allowed;
+}
+
+.error {
+	border-color: var(--color-red-dark);
+}
+
+.error-text {
+	background-color: var(--color-red-dark);
+	border-radius: .5rem;
+	box-shadow: 5px 15px 15px var(--color-blue-dark);
+	color: var(--color-yellow-light);
+	padding: .5rem;
+}
+
+
+
+
+
+
+
 
 /*=================================
 EXAMPLES
