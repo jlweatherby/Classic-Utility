@@ -82,6 +82,7 @@ h4, h5, h6 {
 	font-size: var(--size-one);
 	letter-spacing: -.04em;
 	line-height: 1.4;
+	margin-left: 1rem;
 }
 p, li{
 	font-family: var(--font-primary);
@@ -121,12 +122,12 @@ a:hover {
 
 a:active {
 	background-color: var(--color-yellow);
-	border-radius: .2rem;
 	color: var(--color-red);
 }
 
 a:focus {
 	border: var(--color-red-dark);
+	border-radius: .2rem;
 	background-color: var(--color-red-light);
 	color: var(--color-green-dark);
 }	
@@ -169,7 +170,7 @@ nav li {
 	border-radius: .5rem;
 	box-shadow: 0 2px 15px var(--color-red-dark) inset;
 	margin: 0 1rem 1rem 1rem;
-	padding: .5rem;
+	padding: 1rem .5rem;
 }
 
 html {
@@ -533,19 +534,21 @@ form .block {
 	max-width: 35rem;
 }
 
+form .block .block{
+	background-color: var(--color-shade-light);
+	margin-top: 1rem;
+}
+
 .helper-text{
 	margin-left: .5rem;
 	font: normal .5rem var(--font-primary);
 }
 
-input:not([type=submit]), input:focus {
+input:focus, textarea:focus, select:focus {
 	background-color: var(--color-yellow-light);
 	border-color: var(--color-green);
+	box-shadow: var(--block-shadow);
 	color: green;
-}
-
-input[error] {
-
 }
 
 #address, #select {
@@ -579,17 +582,14 @@ input[type=submit]:hover, input[type=submit]:focus, button:hover, button:focus {
 	transition: all .5s;
 }
 
-
-
-
-input[disabled] {
+input[disabled], textarea[disabled], select[disabled] {
 	background-color: var(--color-shade);
 	border-color: var(--color-red-dark);
 	cursor: not-allowed;
 }
 
-.error {
-	border-color: var(--color-red-dark);
+input.error {
+	border-color: var(--color-red-light);
 }
 
 .error-text {
@@ -600,18 +600,12 @@ input[disabled] {
 	padding: .5rem;
 }
 
-
-
-
-
-
-
-
 /*=================================
 EXAMPLES
 =================================*/
 
 .color-swatch {
+	border: .1rem solid var(--color-shade);
 	border-radius: .5rem;
 	max-width: 30%;	
 }

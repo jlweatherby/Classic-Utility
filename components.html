@@ -26,7 +26,7 @@
 		</header>
 
 		<main>
-			<h1 class="block">Classic Utility Components</h1>
+			<h1 class="block">Components</h1>
 
 			<section class="block">
 				<h2>Button Links</h2>
@@ -89,47 +89,98 @@
 
 			<section class="block">
 				<h2>Form Inputs</h2>
-				<figure>
+					<figure>
 					<form>
-						<h3>Text Input</h3>
-						<div class="block">
-							<label for="text-input">Text Input</label>
-							<input type="text" id="text-input" name="text-input" required class="error" placeholder="Placeholder Text">
-							<p class="featured-text">*Required</p>
-						</div>
-
-						<h3>Text Area Input</h3>
-						<div class="block">
-							<label for="textarea">Text Area Input</label>
-							<p class="helper-text">Helper Text</p>
-							<input type="textarea" id="textarea" name="textarea" class="error" placeholder="Placeholder Text"></textarea>
-							<p class="error-text">Please fill in this form.</p>
-							<p class="featured-text">*Required</p>
-						</div>
-
-						<h3>Disabled Input</h3>
-						<div class="block">
-							<label for="disabled-input">Text Input (Disabled)</label>
-							<input type="text" id="address" name="disabled-input" disabled>
-						</div>
-
-						<h3>Select Input</h3>
-						<div class="block">
-							<label for="select">Select Input</label>
-							<select id="select" name="select">
-								<option disabled hidden selected>Please Select</option>
-								<option value="Alabama">Option 1</option>
-								<option value="Alaska">Option 2</option>
-								<option value="Arkansas">Option 3</option>
-								<option value="Arizona">Option 4</option>
+						<section class="block">
+							<h3>Text Inputs</h3>
+							<div class="block">
+								<label for="text-input">Normal Text Input</label>
+								<input type="text" id="text-input" name="text-input"  placeholder="Placeholder Text">
 								<p class="featured-text">*Required</p>
-							</select>
-						</div>
+							</div>
+
+							<div class="block">
+								<label for="text-input">Error Text Input</label>
+								<input type="text" id="text-input" name="text-input" required class="error" placeholder="Placeholder Text">
+								<p class="error-text">Please fill in this field.</p>
+								<p class="featured-text">*Required</p>
+							</div>
+							<div class="block">
+								<label for="text-input">Disabled Text Input</label>
+								<input type="text" id="text-input" name="text-input" disabled placeholder="Placeholder Text">
+								<p class="featured-text">*Required</p>
+							</div>
+						</section>
+
+						<section class="block">
+							<h3>Text Area Inputs</h3>
+							<div class="block">
+								<label for="textarea">Normal Text Area Input</label>
+								<p class="helper-text">Helper Text</p>
+								<textarea id="textarea" name="textarea" class="error" placeholder="Placeholder Text"></textarea>
+								<p class="featured-text">*Required</p>
+							</div>
+
+							<div class="block">
+								<label for="textarea">Error Text Area Input</label>
+								<p class="helper-text">Helper Text</p>
+								<textarea id="textarea" name="textarea" class="error" placeholder="Placeholder Text"></textarea>
+								<p class="error-text">Please fill in this field.</p>
+								<p class="featured-text">*Required</p>
+							</div>
+
+							<div class="block">
+								<label for="textarea">Disabled Text Area Input</label>
+								<p class="helper-text">Helper Text</p>
+								<textarea id="textarea" name="textarea" class="error" disabled placeholder="Placeholder Text"></textarea>
+								<p class="featured-text">*Required</p>
+							</div>
+						</section>
+
+						
+						<section class="block">
+							<h3>Select Inputs</h3>
+							<div class="block">
+								<label for="select">Normal Select Input</label>
+								<select id="select" name="select">
+									<option disabled hidden selected>Please Select</option>
+									<option value="Alabama">Option 1</option>
+									<option value="Alaska">Option 2</option>
+									<option value="Arkansas">Option 3</option>
+									<option value="Arizona">Option 4</option>
+									<p class="featured-text">*Required</p>
+								</select>
+							</div>
+
+							<div class="block">
+								<label for="select">Error Select Input</label>
+								<select id="select" name="select" class="error">
+									<option disabled hidden selected>Please Select</option>
+									<option value="Alabama">Option 1</option>
+									<option value="Alaska">Option 2</option>
+									<option value="Arkansas">Option 3</option>
+									<option value="Arizona">Option 4</option>
+									<p class="error-text">Please fill in this field.</p>
+									<p class="featured-text">*Required</p>
+								</select>
+							</div>
+
+							<div class="block">
+								<label for="select">Disabled Select Input</label>
+								<select id="select" name="select" disabled>
+									<option disabled hidden selected>Please Select</option>
+									<option value="Alabama">Option 1</option>
+									<option value="Alaska">Option 2</option>
+									<option value="Arkansas">Option 3</option>
+									<option value="Arizona">Option 4</option>
+									<p class="featured-text">*Required</p>
+								</select>
+							</div>
+						</section>
 
 						<input type="submit">
 
 					</form>
-
 				</figure>
 			</section>
 		</main>
