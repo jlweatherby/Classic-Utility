@@ -395,7 +395,7 @@ BUTTON LINKS
 ACCORDIONS
 =================================*/
 details {
-	border: 1px solid purple;
+	border: 1px solid var(--color-shade);
 	margin: 1rem 0;
 }
 
@@ -455,8 +455,8 @@ details[open] summary:before{
 
 details[open] div {
 	animation-name: invisiblyGrowFontSize, fadeIn;
-  animation-duration: .5s, .2s;
-  animation-delay: 0s, .5s;
+	animation-duration: .5s, .2s;
+	animation-delay: 0s, .5s;
 }
 
 /*=================================
@@ -599,6 +599,113 @@ input.error {
 	color: var(--color-yellow-light);
 	padding: .5rem;
 }
+
+/*=================================
+CARDS
+=================================*/
+.card {
+	border: .1rem solid var(--color-shade);
+	border-radius: .5rem;
+	box-shadow: 5px 15px 15px var(--color-blue-dark);
+	max-width: 90vw;
+	padding: 0;
+}
+
+.card a {
+	padding: 0;
+} 
+
+.card img {
+	border-bottom: .1rem solid var(--color-shade);
+	border-radius: .5rem .5rem 0 0;
+	max-width: 100%;
+}
+
+.card h4 {
+	border-bottom: .1rem solid var(--color-shade);
+	margin: 0;
+	padding: .5rem;
+	text-shadow: .2rem .2rem .2rem var(--color-blue-light);
+}
+
+.card p{
+	margin: .5rem;
+	}
+/*=================================
+NOTIFICATIONS
+=================================*/
+
+.notification {
+	border: .1rem solid var(--color-shade-dark);
+	border-radius: .5rem;
+	box-shadow: 5px 15px 15px var(--color-shade-dark);
+	display: flex;
+	justify-content: space-between;
+	max-width: 90vw;
+}
+
+.notification img {
+	padding: .2rem;
+}
+
+.notification-open {
+	border-radius: .5rem 0 0 .5rem;
+	border-right: .1rem solid rgba(0, 0, 0, .3);
+	margin-right: .3rem;
+}
+
+.notification-close {
+	border-radius: 0 .5rem .5rem 0;
+	border-left: .1rem solid rgba(0, 0, 0, .3);
+	margin-left: .3rem;
+}
+
+/*error notification*/
+.notification-error {
+	background-color: var(--color-red-light);
+}
+.notification-error .notification-open {
+	background-color: var(--color-red);
+} 
+.notification-error .notification-close {
+	background-color: var(--color-red);
+} 
+
+
+/*warning notification*/
+.notification-warning {
+	background-color: var(--color-yellow-light);
+}
+.notification-warning .notification-open {
+	background-color: var(--color-yellow);
+} 
+.notification-warning .notification-close {
+	background-color: var(--color-yellow);
+} 
+
+
+/*neutral notification*/
+.notification-neutral {
+	background-color: var(--color-blue-light);
+}
+.notification-neutral .notification-open {
+	background-color: var(--color-blue);
+} 
+.notification-neutral .notification-close {
+	background-color: var(--color-blue);
+} 
+
+
+/*success notification*/
+.notification-success {
+	background-color: var(--color-green-light);
+}
+.notification-success .notification-open {
+	background-color: var(--color-green);
+}
+.notification-success .notification-close {
+	background-color: var(--color-green);
+} 
 
 /*=================================
 EXAMPLES
