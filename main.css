@@ -444,6 +444,7 @@ details[open] summary:before{
     opacity: 0;
 	}
 }
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -478,6 +479,7 @@ dialog::backdrop {
 
 dialog[open] {
 	animation: show .5s ease normal;
+	position: fixed;
 }
 
 @keyframes show{
@@ -497,6 +499,11 @@ dialog[open] {
 	margin: auto;
 	max-width: 35rem;
 	z-index: 1;
+}
+
+#modal-demo h2 {
+	padding: .5rem;
+	box-shadow: var(--block-shadow);
 }
 
 /*============================================
@@ -631,6 +638,16 @@ CARDS
 .card p{
 	margin: .5rem;
 	}
+
+.article-card {
+	position: relative;
+}
+
+.article-card div{
+	background-color: #f0f1f1b3;
+	bottom: .1rem;
+	position: absolute;
+}
 /*=================================
 NOTIFICATIONS
 =================================*/
@@ -671,16 +688,20 @@ NOTIFICATIONS
 	background-color: var(--color-red);
 } 
 
+.notification-error div p:not(.tertiary-text){
+	text-transform: uppercase;
+
+}
 
 /*warning notification*/
 .notification-warning {
 	background-color: var(--color-yellow-light);
 }
 .notification-warning .notification-open {
-	background-color: var(--color-yellow);
+	background-color: var(--color-yellow-dark);
 } 
 .notification-warning .notification-close {
-	background-color: var(--color-yellow);
+	background-color: var(--color-yellow-dark);
 } 
 
 
@@ -729,7 +750,7 @@ EXAMPLES
 	text-align: left;
 }
 
-.display-font p{
+.display-font p([type=submit]){
 	font-family: var(--font-display);
 }
 
