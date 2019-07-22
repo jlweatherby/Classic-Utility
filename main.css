@@ -494,21 +494,6 @@ dialog[open] {
     }
 }
 
-#modal-demo {
-	background-color: var(--color-shade);
-}
-
-#modal-demo div{
-	margin: auto;
-	max-width: 35rem;
-	z-index: 1;
-}
-
-#modal-demo h2 {
-	padding: .5rem;
-	box-shadow: var(--block-shadow);
-}
-
 /*============================================
 Forms
 =============================================*/
@@ -598,8 +583,9 @@ input[disabled], textarea[disabled], select[disabled] {
 	cursor: not-allowed;
 }
 
-input.error {
+input.error, textarea.error, select.error{
 	border-color: var(--color-red-light);
+	background-color: #eba1a8b3;
 }
 
 .error-text {
@@ -628,7 +614,7 @@ CARDS
 
 .card img {
 	border-bottom: .1rem solid var(--color-shade);
-	width: 100%;
+	max-width: 100%;
 }
 
 .card h4 {
@@ -648,7 +634,6 @@ CARDS
 
 .article-card div{
 	background-color: #f0f1f1b3;
-	
 	bottom: 0;
 	position: absolute;
 }
@@ -662,7 +647,8 @@ NOTIFICATIONS
 	box-shadow: 5px 15px 15px var(--color-shade-dark);
 	display: flex;
 	justify-content: space-between;
-	max-width: 90vw;
+	margin: auto;
+	max-width: 25rem;
 	overflow: hidden;
 }
 
@@ -693,7 +679,6 @@ NOTIFICATIONS
 
 .notification-error div p:not(.tertiary-text){
 	text-transform: uppercase;
-
 }
 
 /*warning notification*/
@@ -757,7 +742,7 @@ figure {
 	text-align: left;
 }
 
-.display-font p([type=submit]){
+.display-font p[type=submit] {
 	font-family: var(--font-display);
 }
 
