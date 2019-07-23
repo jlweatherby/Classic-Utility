@@ -603,6 +603,7 @@ CARDS
 	border: .3rem solid var(--color-shade);
 	border-radius: .5rem;
 	box-shadow: 5px 15px 15px var(--color-blue-dark);
+	margin: 0 auto 1rem auto;
 	max-width: 25rem;
 	overflow: hidden;
 	padding: 0;
@@ -717,7 +718,7 @@ NOTIFICATIONS
 } 
 
 /*=================================
-CARD GRID
+CARD GRIDS
 =================================*/
 
 .card-system {
@@ -790,8 +791,23 @@ CARD GRID
 	}
 }
 
+/*Profile Card Grid*/
 
+.person-card .link-button {
+	padding: .5rem;
+	margin-bottom: 1rem;
+}
 
+@media (min-width: 1000px) {
+
+	.person-card-system{
+		align-items: baseline;
+		display: grid;
+		grid-gap: 1rem;
+		grid-template-columns: 1fr 1fr 1fr;
+		justify-items: center;
+	}
+}
 
 /*=================================
 EXAMPLES
@@ -821,6 +837,11 @@ figure {
 
 .display-font p[type=submit] {
 	font-family: var(--font-display);
+}
+
+.grid-examples img{
+	margin: auto;
+	max-width: 90%;
 }
 
 
