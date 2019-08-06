@@ -4,14 +4,13 @@
 	</head> 
 	    <meta charset="utf-8">
 	    <meta http-equiv="x-ua-compatible" content="ie=edge">
-	    <title>JLWeatherby | Home</title>
+	    <title>JLWeatherby | Contact</title>
 	    <meta name="description" content="${2}">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 	    <link rel="stylesheet" href="main.css">
 	    <link href="https://fonts.googleapis.com/css?family=EB+Garamond:500,800&display=swap" rel="stylesheet">
 	<body>
-
 		<header>
 			<div class="logo"><a href="index.html">J L Weatherby</a></div>
 			<nav>
@@ -26,16 +25,23 @@
 		
 
 		<main>
-			<div class="hero">
-				<a href="contact.html" class="link-button">Contact me!</a>
-				<img src="images/hero-luc.png">
+			<h1 class="logo">Contact Me</h1>
+			<div class=contact-form>
+				<form action="https://formspree.io/joseph.weatherby@g.austincc.edu" method="POST">
+		  			<label for="name">your name &searr;</label>
+		  			<input type="text" name="name" id="name" placeholder="Type your name here">
 
-				<div>
-					<h1>JLWeatherby</h1>
-					
-					<p>JL Weatherby has a BA in Applied Linguistics. He taught literacy skills to children and English language skills to adults in English and Spanish in 2016. From 2016 to 2018 he served refugees and other displaced individuals with Refugee Services of Texas. He is now pursuing a UX Design Certificate from Austin Community College and is working at a PingPong club called Spin! in downtown Austin, TX.</p>
-					
-				</div>
+		  			<label for="tel">your phone number &searr;</label>
+		  			<input type="tel" name="_replyto" id="tel" placeholder="Type your phone number here">
+
+		  			<label for="email">your email &searr;</label>
+		  			<input type="email" name="_replyto" id="email" placeholder="Type your email address here">
+
+		  			<label for="message">your message &searr;</label>
+		  			<textarea id="message" placeholder="Type what you would like to say here"></textarea>
+
+					<input type="submit" value="Send">
+				</form>
 			</div>
 		</main>
 
@@ -49,7 +55,5 @@
 				</ul>
 			</nav>
 		</footer>
-
 	</body>
 </html>
-
