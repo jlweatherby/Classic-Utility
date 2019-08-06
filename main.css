@@ -240,7 +240,6 @@ HEADER and FOOTER COMPONENTS
 
 header, footer {
 	background-color: var(--color-shade);
-	display: flex;
 	margin: 0;
 	padding: 1rem;
 }
@@ -468,8 +467,18 @@ form {
 input, textarea, label {
 	box-sizing: border-box;
 	display: block;
-	margin-top:1rem 0;
 	width: 100%;
+	margin: auto;
+	max-width: 25rem;
+
+}
+
+input, textarea{
+	
+}
+
+label {
+	margin-top: 1rem;
 }
 
 input::placeholder {
@@ -480,8 +489,7 @@ input::placeholder {
 input[type=Submit] {
 	margin: auto;
 	margin-top: 1rem;
-
-	width: 50%;
+	width: 10rem;
 }
 
 label {
@@ -563,7 +571,7 @@ CARDS
 
 @media (min-width: 775px) {
 	.portfolio-grid{
-		grid-template-columns: 250px 250px 250px;
+		grid-template-columns: repeat(3, 250px);
 		grid-auto-rows: 250px;
 	}
 
@@ -575,7 +583,7 @@ CARDS
 
 @media (min-width: 1030px) {
 	.portfolio-grid{
-		grid-template-columns: 250px 250px 250px 250px;
+		grid-template-columns: repeat(4, 250px);
 		grid-auto-rows: 250px;
 	}
 
